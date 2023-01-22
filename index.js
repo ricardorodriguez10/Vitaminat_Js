@@ -23,14 +23,14 @@
 
 // Formula de IMC
 
-var submit = document.querySelector("#submitImc");
+let submit = document.querySelector("#submitImc");
 
 submit.addEventListener('click', function() {
-  var weightInput = Number(document.querySelector("#weight").value)
-  var heightInput = Number(document.querySelector("#height").value)
+  let weightInput = Number(document.querySelector("#weight").value)
+  let heightInput = Number(document.querySelector("#height").value)
 
-  var imc = weightInput / (heightInput * heightInput);
-  var imctofixed = imc.toFixed(1)
+  let imc = weightInput / (heightInput * heightInput);
+  let imctofixed = imc.toFixed(1)
 
   if (imctofixed <18.5) {
     alert(`Tú IMC es de ${imctofixed}, estás bajo peso`)
@@ -51,8 +51,8 @@ console.log(submit)
 
 
 
-var mensaje = document.querySelector("#mensaje1");
-var contador = document.querySelector("#contador1");
+let mensaje = document.querySelector("#mensaje1");
+let contador = document.querySelector("#contador1");
 
 mensaje.addEventListener('input', function(e) {
     const target = e.target;
@@ -64,10 +64,10 @@ mensaje.addEventListener('input', function(e) {
 
 // dietometro
 
-var dietometro = document.querySelector("#submitDietometro")
+let dietometro = document.querySelector("#submitDietometro")
 
 dietometro.addEventListener ('click', function () {
-var notaInput = Number(document.querySelector ("#nota").value)
+let notaInput = Number(document.querySelector ("#nota").value)
 
 
 if(notaInput <5) {
@@ -89,7 +89,7 @@ else {
 
 // cambiar de color imagen
 
-var asesorNutricionalBox = document.querySelectorAll(".gym").length;
+let asesorNutricionalBox = document.querySelectorAll(".gym").length;
 
 for (var i=0; i<asesorNutricionalBox; i++) {
 
@@ -113,9 +113,11 @@ input.addEventListener("click", (event) => {
   if(text.value === "") {
 alert ("Put your goal");
   } else {
-    createBtn.innerHTML = ""
+    createBtn.innerHTML = "<img src= '../images/basura.jpg' alt='trash'/>";
+    createBtn.classList.add("trash")
   const newList = list.appendChild(li);
   newList.append(text.value);
+  newList.appendChild(createBtn);
 }
 
   text.value = "";

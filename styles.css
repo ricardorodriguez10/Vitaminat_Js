@@ -198,7 +198,6 @@ body {
   padding: 1px 5px 1px 5px;
   background-color: white;
   border: none;
-  border-radius: 50%;
   margin-left: 2px;
   cursor: pointer;
   transition: all 200ms ease;
@@ -230,4 +229,17 @@ border: thin solid black;
   display: flex;
   align-content: center;
   justify-content: space-between;
+}
+
+.trash {
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.list img {
+  width: 20px;
+  pointer-events: none;
 }
